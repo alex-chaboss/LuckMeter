@@ -1,0 +1,96 @@
+.main {
+}
+
+@keyframes glowing {
+  0% { background-color: black; box-shadow: 0 0 5px white; }
+  50% { background-color: darkgoldenrod; box-shadow: 0 0 20px gold; }
+  100% { background-color: ghostwhite; box-shadow: 0 0 5px darkblue; }
+}
+
+.content-header {
+  text-align: center;
+}
+
+.card-button {
+  background: linear-gradient(50deg, black, gold);
+
+  border: none;
+  color: #eeeeee;
+  cursor: pointer;
+  font-family: sans-serif;
+  text-align: center;
+  text-decoration: none;
+
+  animation: glowing 1300ms infinite;
+}
+
+.level-style {
+  color: #7e57ff;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.item-button-text {
+  --background: transparent;
+  margin: 25px 0;
+}
+
+.title-button {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 13vw;
+  color: gold;
+  text-shadow: 1px 1px 2px whitesmoke, 0 0 1em #7e57ff, 0 0 0.2em #633ce0;
+}
+
+.content-footer-text {
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 0;
+  margin: 0;
+  font-size: 5vw;
+}
+
+.item-footer {
+  padding: 0;
+  margin: 0;
+  --background: transparent;
+}
+
+.item-info {
+  padding: 0;
+  margin: 0;
+  --background: transparent;
+}
+
+.text-info {
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+ion-col {
+  text-align: -webkit-center;
+}
+
+.coin-button {
+  --background: goldenrod;
+  --color: green;
+  border-color: yellow;
+  border-style: outset;
+  border-radius: 50%;
+  border-width: 1.1vw;
+  font-size: 4vw;
+  font-weight: bold;
+  width: 15vw;
+  height: 15vw;
+}
+
+.current-rise-up {
+  width: 100%;
+  text-align: center;
+  font-size: 4vw;
+  font-weight: bold;
+  color: white;
+}

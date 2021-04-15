@@ -1,0 +1,32 @@
+<ion-card class="main" id="home-instruction-3">
+  <div class="carousel-container">
+    <div class="carousel" [ngStyle]="{'transform': 'rotateX(0deg) translateZ('+ (-1 * tz) +'px)'}">
+      <div class="spiner" [style.width]="itemWidthLimit + 'vw'" *ngFor="let n of slots; let sl=index">
+
+        <div class="percent-item" *ngIf="n === 2" [@spiner]="isColorSet ? colorAnimation : 'front'">.</div>
+
+        <div *ngIf="n !== 2">
+          <div radio-group class="carousel-slide-item slide-item-{{i}}" *ngFor="let item of items; let i=index"
+               [style.background-color]="item.bgColor"
+               [ngStyle]="{
+                                'transform': 'rotateX(-'+item.currentPlacement+'deg)  translateZ('+tz+'px)',
+                                '-webkit-transform': 'rotateX('+item.currentPlacement+'deg)  translateZ('+tz+'px)',
+                                '-ms-transform': 'rotateX('+item.currentPlacement+'deg)  translateZ('+tz+'px)',
+                                '-o-transform': 'rotateX('+item.currentPlacement+'deg)  translateZ('+tz+'px)'
+                            }"
+               (swipeleft)="onSwipeLeft($event)"
+               (swiperight)="onSwipeRight($event)"
+          >
+            <div class="percent-item"
+                 [@spiner]="isFront(i, sl) || isHide ? (isColorSet ? colorAnimation : 'front') : 'back'">
+              {{i}}
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</ion-card>
+

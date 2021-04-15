@@ -1,0 +1,46 @@
+.main {
+  box-shadow: none;
+}
+
+.carousel-container {
+  position: relative;
+  perspective: 200vw;
+  display: flex;
+  justify-content: center;
+}
+
+.spiner {
+  display: flex;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 2s;
+}
+
+.carousel {
+  display: flex;
+  height: 30vw;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 2s;
+}
+
+.carousel-slide-item {
+  display: inline-block;
+  position: absolute;
+  background: #000;
+  font-size: large;
+  text-align: center;
+  color: #FFF;
+  opacity: 0.95;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.percent-item {
+  font-size: 20vw;
+  text-align: center;
+  color: black;
+  text-shadow: 2px 2px 8px #0a204a;
+  background: none;
+}

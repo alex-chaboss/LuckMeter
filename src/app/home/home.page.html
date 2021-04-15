@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button id="home-instruction-0"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <div class="header-div-container">
+      <ion-text class="welcome-text">Welcome to LuckMeter</ion-text>
+      <ion-fab vertical="center" horizontal="end" style="right: 4px">
+        <ion-fab-button size="small" color="light" id="home-instruction-1">
+          <ion-icon name="settings"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="bottom">
+          <ion-fab-button class="menu-button" (click)="startAutoreload()">
+            <ion-icon src="../assets/icon/reload-outline.svg"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button class="menu-button" (click)="stopAutoreload()">
+            <ion-icon src="../assets/icon/dice-outline.svg"></ion-icon>
+          </ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+    </div>
+    <ion-card-content class="main-body" (click)="check()" [@luckChange]="animationState" id="home-instruction-5">
+      <ion-item lines="none" class="main-items">
+        <ion-text class="config-item" id="home-instruction-2">
+          Configs: {{accuracy}}-accuracy, {{currentLuck.average ? currentLuck.average.toFixed(2) : 0.01}}-average
+        </ion-text>
+      </ion-item>
+
+      <app-spiner [currentLuck]="currentLuck.percent"></app-spiner>
+    </ion-card-content>
+
+    <ion-card-content>
+      <ion-button class="main-button" (click)="check()" id="home-instruction-4">check</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <div>
+    <app-paypal></app-paypal>
+  </div>
+</ion-content>

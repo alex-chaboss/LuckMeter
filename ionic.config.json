@@ -1,0 +1,7 @@
+{
+  "name": "luckmeter",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

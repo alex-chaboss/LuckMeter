@@ -1,0 +1,96 @@
+.welcome-card ion-img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+
+.main-body {
+  padding: 0px;
+  color: white;
+}
+
+.main-items {
+  --background: inherit;
+  justify-content: center;
+  display: grid;
+}
+
+.percent-item {
+  font-size: 20vw;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 8px #0a204a;
+  background: none;
+}
+
+.config-item {
+  font-size: 4vw;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.main-button {
+  --background: #afb42b;
+  width: 100%;
+  color: #292b2c;
+  height: 60px;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.menu-button {
+  --color: blue;
+}
+
+.header-div-container {
+  width: 100%;
+  position: relative;
+  height: 50px;
+  display: flex;
+  align-content: center;
+}
+
+.welcome-text {
+  align-self: center;
+  margin: 0px 16px;
+}
+
+.carousel-container {
+  position: relative;
+  perspective: 200vw;
+  display: flex;
+}
+
+.spiner {
+  display: flex;
+  height: 300px;
+  width: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.carousel {
+  display: flex;
+  height: 30vw;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  margin: 0 auto;
+  padding-left: 18px;
+}
+
+.carousel-slide-item {
+  display: inline-block;
+  position: absolute;
+  background: #000;
+  width: 80%;
+  min-width: 200px;
+  font-size: large;
+  text-align: center;
+  color: #FFF;
+  opacity: 0.95;
+  border-radius: 10px;
+  margin: 0 auto;
+}

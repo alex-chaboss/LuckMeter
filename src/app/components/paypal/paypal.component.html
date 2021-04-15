@@ -1,0 +1,52 @@
+<ion-card class="main">
+  <ion-card-title class="content-header" id="home-instruction-6">
+    Karma Level - <span class="level-style">{{karmaLevel}}</span>
+  </ion-card-title>
+  <ion-card-content>
+    <ion-card class="card-button" (click)="show()" id="home-instruction-8" >
+      <ion-item class="item-info">
+        <ion-text class="text-info" id="home-instruction-7">
+          1 USD ($) = {{karmaStep.toLocaleString('fullwide', { useGrouping: true, maximumSignificantDigits:7})}} karma.
+        </ion-text>
+      </ion-item>
+      <ion-item class="item-button-text" lines="none">
+        <ion-title class="title-button">
+          RISE UP
+          <ion-icon name="arrow-round-up"></ion-icon>
+        </ion-title>
+      </ion-item>
+
+      <ion-grid  [@openClose]="animationState">
+        <ion-row>
+          <ion-col>
+            <ion-fab-button class="coin-button" (click)="donate(1)">1$</ion-fab-button>
+          </ion-col>
+          <ion-col>
+            <ion-fab-button class="coin-button" (click)="donate(10)">10$</ion-fab-button>
+          </ion-col>
+          <ion-col>
+            <ion-fab-button class="coin-button" (click)="donate(50)">50$</ion-fab-button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-fab-button class="coin-button" (click)="donate(200)">200$</ion-fab-button>
+          </ion-col>
+          <ion-col>
+            <ion-fab-button class="coin-button" (click)="donate(1000)">1000$</ion-fab-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+      <ion-text class="current-rise-up">{{currentRiseUp}}</ion-text>
+      <div #paypalbuttoncontainer id="paypal-button-container"></div>
+      <ion-item lines="none" class="item-footer">
+        <ion-text class="content-footer-text">
+          Use <span class="level-style">PayPal</span> to donate and up your <span class="level-style">Karma</span>
+        </ion-text>
+      </ion-item>
+    </ion-card>
+  </ion-card-content>
+</ion-card>
